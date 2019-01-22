@@ -14,7 +14,9 @@ var observer = new MutationObserver(function(mutations) {
     }
     var fireTime = document.createElement("span");
     fireTime.className = "firetime";
-    fireTime.appendChild(document.createTextNode(moment.unix(time).fromNow()));
+    fireTime.appendChild(document.createTextNode(moment.unix(time).calendar(null, {
+      sameElse: 'LLL'
+    })));
     node.parentNode.insertBefore(fireTime, node.nextSibling);
   }
 });
