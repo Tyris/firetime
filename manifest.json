@@ -12,6 +12,6 @@
     "content_scripts": [{
       "css": ["styles.css"],
       "js": ["moment.js", "content.js"],
-      "matches": ["https://console.firebase.google.com/*/database/*/data/*"]
+      "matches": ["https://console.firebase.google.com/*/database/*/data*"]
     }]
 }
